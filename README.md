@@ -1,14 +1,14 @@
 # Set Aliases For Windowns 10
 ### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windowns ?
 
-1. Mở `Command Prompt` chạy với quyền cao nhất(Run as administrator) và `cd` đến `C:\Users\USERNAME\`
+1. Mở `Command Prompt` chạy với quyền cao nhất (*Run as administrator*) và `cd` đến `C:\Users\USERNAME\`
 
 2. Gõ vào lệnh: `notepad .bashrc`
 
 3. Dán dòng code này vào
 ```
-    alias gst='git status'
-    alias gbr='git branch'
+alias gst='git status'
+alias gbr='git branch'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gs='git switch'
@@ -42,92 +42,91 @@ alias glol='git log --oneline'
 
 3. Dán dòng code này vào
 #### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
-
-    ```
-    function gitStatus {
+```
+function gitStatus {
         git 'status'
     }
     
-    function gitBranch {
+function gitBranch {
         git 'branch' 
     }
     
-    function gitCheckout {
+function gitCheckout {
         git 'checkout' 
     }
     
-    function gitCheckoutBranch {
+function gitCheckoutBranch {
         git 'checkout -b'
     }
     
-    function gitSwitch {
+function gitSwitch {
         git 'switch' 
     }
     
-    function gitLogOneLine {
+function gitLogOneLine {
         git 'log --oneline'
     }
     
-    function gitAddAll {
+function gitAddAll {
         git 'add .' 
     }
     
-    function gitAdd {
+function gitAdd {
         git 'add' 
     }
     
-    function gitCommit {
+function gitCommit {
         git 'commit -m'
     }
     
-    function gitPush {
+function gitPush {
         git 'push' 
     }
     
-    function gitPull {
+function gitPull {
         git 'pull' 
     }
     
-    function gitPushOrigin {
+function gitPushOrigin {
         git 'push origin' 
     }
     
-    function gitPullOrigin {
+function gitPullOrigin {
         git 'push origin' 
     }
     
-    function gitPushMain {
+function gitPushMain {
         git 'push main' 
     }
     
-    function gitPushMain {
+function gitPushMain {
         git 'push main' 
     }
     
-    function gitMerge {
+function gitMerge {
         git 'merge' 
     }
     
-    function gitFetch {
+function gitFetch {
         git 'fetch' 
     }
     
-    Set-Alias gst gitStatus
-    Set-Alias gbr gitBranch
-    Set-Alias gco gitCheckout
-    Set-Alias gcb gitCheckoutBranch
-    Set-Alias glol gitLogOneLine
-    Set-Alias gaa gitAddAll
-    Set-Alias ga gitAdd
-    Set-Alias gcmm gitCommit
-    Set-Alias gph gitPush
-    Set-Alias gpl gitPull
-    Set-Alias gpo gitPushOrigin
-    Set-Alias gplo gitPullOrigin
-    Set-Alias gpm gitPushMain
-    Set-Alias gs gitSwitch
-    Set-Alias gmg gitMerge
-    Set-Alias gf gitFetch
-    ```
+Set-Alias gst gitStatus
+Set-Alias gbr gitBranch
+Set-Alias gco gitCheckout
+Set-Alias gcb gitCheckoutBranch
+Set-Alias glol gitLogOneLine
+Set-Alias gaa gitAddAll
+Set-Alias ga gitAdd
+Set-Alias gcmm gitCommit
+Set-Alias gph gitPush
+Set-Alias gpl gitPull
+Set-Alias gpo gitPushOrigin
+Set-Alias gplo gitPullOrigin
+Set-Alias gpm gitPushMain
+Set-Alias gs gitSwitch
+Set-Alias gmg gitMerge
+Set-Alias gf gitFetch
+```
 4. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
 5. Mở powershell lên và kiểm tra bằng lệnh `alias` hoặc có thể run đoạn mã với bí danh mới để xem kết quả
