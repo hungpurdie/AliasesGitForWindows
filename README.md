@@ -22,4 +22,10 @@ alias gpl='git pull'
 alias gm='git merge'
 alias glo='git log --oneline' 
 ```
-có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
+Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
+
+Ra màn hình desktop để kiểm tra bằng cách 
+
+Chuột phải vào màn hình và chọn `Git Bash Here`
+
+Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
