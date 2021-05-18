@@ -41,6 +41,7 @@
 ```
 
 3. Dán dòng code này vào
+#### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
 
 ```
     function gitStatus {
