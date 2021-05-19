@@ -1,7 +1,7 @@
 # Set Aliases For Windowns 10
 ### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windowns ?
 
-1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`
+1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
 
 2. Gõ vào lệnh: `notepad .bashrc`
 
