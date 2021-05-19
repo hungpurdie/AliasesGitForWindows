@@ -59,59 +59,59 @@ function gitBranch {
 }
 
 function gitCheckout {
-    git 'checkout' 
+    git 'checkout' $args
 }
 
 function gitCheckoutBranch {
-    git 'checkout -b'
+    git 'checkout' '-b' $args
 }
 
 function gitSwitch {
-    git 'switch' 
+    git 'switch' $args
 }
 
 function gitLogOneLine {
-    git 'log --oneline'
+    git 'log' '--oneline'
 }
 
 function gitAddAll {
-    git 'add .' 
+    git 'add' '.' 
 }
 
 function gitAdd {
-    git 'add' 
+    git 'add' $args
 }
 
 function gitCommit {
-    git 'commit -m'
+    git 'commit' '-m' $args
 }
 
 function gitPush {
-    git 'push' 
+    git 'push' $args
 }
 
 function gitPull {
-    git 'pull' 
+    git 'pull' $args
 }
 
 function gitPushOrigin {
-    git 'push origin' 
+    git 'push' 'origin' $args
 }
 
 function gitPullOrigin {
-    git 'push origin' 
+    git 'pull' 'origin' $args
 }
 
 function gitPushMain {
-    git 'push main' 
+    git 'push' 'main'
 }
 
-function gitPushMain {
-    git 'push main' 
+function gitPullMain {
+    git 'pull' 'main' 
 }
 
 function gitMerge {
-    git 'merge' 
+    git 'merge' $args
 }
 
 function gitFetch {
@@ -119,7 +119,7 @@ function gitFetch {
 }
 
 function gitClone {
-    git 'clone' 
+    git 'clone' $args 
 }
 
 Set-Alias -Name np -Value C:\Windows\notepad.exe
