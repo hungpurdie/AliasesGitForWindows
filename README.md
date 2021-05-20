@@ -1,34 +1,39 @@
 # Set Aliases For Windowns 10
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windowns ?
-
-1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
-
-2. Gõ vào lệnh: `notepad .bashrc`
-
-3. Dán dòng code này vào
-
-```
-alias cls='clear'
-alias gst='git status'
-alias gbr='git branch'
-alias gs='git switch'
-alias gsm='git switch main'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias ga='git add'
-alias gaa='git add .'
-alias gcmm='git commit -m'
-alias gph='git push'
-alias gpho='git push origin'
-alias gphm='git push main'
-alias gpl='git pull'
-alias gplo='git pull origin'
-alias glol='git log --oneline'
-alias gmg='git merge'
-alias gf='git fetch'
-alias gcl='git clone'
-```
+- Nếu bạn set default terminal là Git Bash 
+    - Cách 1: Thủ công
+        1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
+        
+        2. Gõ vào lệnh: `notepad .bashrc`
+        
+        3. Dán dòng code này vào
+        
+        ```
+        alias cls='clear'
+        alias gst='git status'
+        alias gbr='git branch'
+        alias gs='git switch'
+        alias gsm='git switch main'
+        alias gco='git checkout'
+        alias gcb='git checkout -b'
+        alias ga='git add'
+        alias gaa='git add .'
+        alias gcmm='git commit -m'
+        alias gph='git push'
+        alias gpho='git push origin'
+        alias gphm='git push main'
+        alias gpl='git pull'
+        alias gplo='git pull origin'
+        alias glol='git log --oneline'
+        alias gmg='git merge'
+        alias gf='git fetch'
+        alias gcl='git clone'
+        ```
+    - Cách 2: Run `bat` file
+        - Yêu cầu: Phải cài đặt python
+        1. Download file ở phần Realeses
+        2. Mở file `run.cmd`
 
 4. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
 
@@ -39,7 +44,7 @@ alias gcl='git clone'
 7. Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windowns ?
-
+- Nếu bạn set default terminal là Powershell
 1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`
 2. Gõ vào lệnh:
 
