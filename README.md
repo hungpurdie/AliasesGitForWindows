@@ -2,8 +2,12 @@
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windowns ?
 - Nếu bạn set default terminal là Git Bash 
-    - Cách 1: Thủ công
-        1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
+    - Cách 1: Run `bat` file
+        - Yêu cầu: Phải cài đặt python
+        1. Download file `GitBash.rar` và giải nén
+        2. Mở file `run.cmd`
+    - Cách 2: Configure thủ công
+    1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
         
         2. Gõ vào lệnh: `notepad .bashrc`
         
@@ -29,19 +33,15 @@
         alias gmg='git merge'
         alias gf='git fetch'
         alias gcl='git clone'
-        ```
-    - Cách 2: Run `bat` file
-        - Yêu cầu: Phải cài đặt python
-        1. Download file ở phần Realeses
-        2. Mở file `run.cmd`
+        ```  
 
-4. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
+1. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
 
-5. Ra màn hình desktop để kiểm tra bằng cách
+2. Ra màn hình desktop để kiểm tra bằng cách
 
-6. Chuột phải vào màn hình và chọn `Git Bash Here`
+3. Chuột phải vào màn hình và chọn `Git Bash Here`
 
-7. Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
+4. Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windowns ?
 - Nếu bạn set default terminal là Powershell
