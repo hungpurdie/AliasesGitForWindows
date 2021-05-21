@@ -6,36 +6,37 @@
 
   - Cách 1: Run file `main.exe`
     1. Download file `SetAliasesGitBash.rar` ở phần Release
-        - Chú ý: phải để `aliases.txt` cùng thư mục với `main.exe`
+       - Chú ý: phải để `aliases.txt` cùng thư mục với `main.exe`
     2. Mở file `main.exe`
   - Cách 2: Configure thủ công
-     1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
 
-     2. Gõ vào lệnh: `notepad .bashrc`
+    1.  Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
 
-     3. Dán dòng code này vào
+    2.  Gõ vào lệnh: `notepad .bashrc`
 
-     ```
-     alias cls='clear'
-     alias gst='git status'
-     alias gbr='git branch'
-     alias gs='git switch'
-     alias gsm='git switch main'
-     alias gco='git checkout'
-     alias gcb='git checkout -b'
-     alias ga='git add'
-     alias gaa='git add .'
-     alias gcmm='git commit -m'
-     alias gph='git push'
-     alias gpho='git push origin'
-     alias gphm='git push main'
-     alias gpl='git pull'
-     alias gplo='git pull origin'
-     alias glol='git log --oneline'
-     alias gmg='git merge'
-     alias gf='git fetch'
-     alias gcl='git clone'
-     ```
+    3.  Dán dòng code này vào
+
+    ```
+    alias cls='clear'
+    alias gst='git status'
+    alias gbr='git branch'
+    alias gs='git switch'
+    alias gsm='git switch main'
+    alias gco='git checkout'
+    alias gcb='git checkout -b'
+    alias ga='git add'
+    alias gaa='git add .'
+    alias gcmm='git commit -m'
+    alias gph='git push'
+    alias gpho='git push origin'
+    alias gphm='git push main'
+    alias gpl='git pull'
+    alias gplo='git pull origin'
+    alias glol='git log --oneline'
+    alias gmg='git merge'
+    alias gf='git fetch'
+    alias gcl='git clone'
+    ```
 
 1. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn đúng với `format` của các alias
 
@@ -48,121 +49,126 @@
 ### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windows ?
 
 - Nếu bạn set default terminal là PowerShell
-    - *Chú ý:* Terminal là **[PowerShell](https://github.com/PowerShell/PowerShell)** không phải là **Windows PowerShell**
-    - Cách 1: Run file `main.ps1`
 
-        1. Download file `SetAliasesPowerShell.rar` ở phần Release
+  - _Chú ý:_ Terminal là **[PowerShell](https://github.com/PowerShell/PowerShell)** không phải là **Windows PowerShell**
 
-        2. Open **PowerShell**, cd đến thư mục vừa tải xuống
+  ![](https://github.com/nmhung2022/SetAliasesForWindows/blob/main/searchpowershell.png?raw=true)
 
-        3. Gõ vào lệnh: `.\main.ps1`
+  - Cách 1: Run file `main.ps1`
 
-    - Cách 2: Configure thủ công
-        1. Mở **PowerShell** và cd đến `C:\Users\USERNAME\`
-        2. Gõ vào lệnh:
+    1. Download file `SetAliasesPowerShell.rar` ở phần Release
 
-        ```
-            ni $profile
-            notepad $profile
-        ```
+    2. Open **PowerShell**, cd đến thư mục vừa tải xuống
 
-        3. Dán dòng code này vào
+    3. Gõ vào lệnh: `.\main.ps1`
 
-        #### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
+  - Cách 2: Configure thủ công
 
-        ```
-        function gitStatus {
-            git 'status'
-        }
+    1. Mở **PowerShell** và cd đến `C:\Users\USERNAME\`
+    2. Gõ vào lệnh:
 
-        function gitBranch {
-            git 'branch'
-        }
+    ```
+        ni $profile
+        notepad $profile
+    ```
 
-        function gitCheckout {
-            git 'checkout' $args
-        }
+    3. Dán dòng code này vào
 
-        function gitCheckoutBranch {
-            git 'checkout' '-b' $args
-        }
+    #### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
 
-        function gitSwitch {
-            git 'switch' $args
-        }
+    ```
+    function gitStatus {
+        git 'status'
+    }
 
-        function gitLogOneLine {
-            git 'log' '--oneline'
-        }
+    function gitBranch {
+        git 'branch'
+    }
 
-        function gitAddAll {
-            git 'add' '.'
-        }
+    function gitCheckout {
+        git 'checkout' $args
+    }
 
-        function gitAdd {
-            git 'add' $args
-        }
+    function gitCheckoutBranch {
+        git 'checkout' '-b' $args
+    }
 
-        function gitCommit {
-            git 'commit' '-m' $args
-        }
+    function gitSwitch {
+        git 'switch' $args
+    }
 
-        function gitPush {
-            git 'push' $args
-        }
+    function gitLogOneLine {
+        git 'log' '--oneline'
+    }
 
-        function gitPull {
-            git 'pull' $args
-        }
+    function gitAddAll {
+        git 'add' '.'
+    }
 
-        function gitPushOrigin {
-            git 'push' 'origin' $args
-        }
+    function gitAdd {
+        git 'add' $args
+    }
 
-        function gitPullOrigin {
-            git 'pull' 'origin' $args
-        }
+    function gitCommit {
+        git 'commit' '-m' $args
+    }
 
-        function gitPushMain {
-            git 'push' 'main'
-        }
+    function gitPush {
+        git 'push' $args
+    }
 
-        function gitPullMain {
-            git 'pull' 'main'
-        }
+    function gitPull {
+        git 'pull' $args
+    }
 
-        function gitMerge {
-            git 'merge' $args
-        }
+    function gitPushOrigin {
+        git 'push' 'origin' $args
+    }
 
-        function gitFetch {
-            git 'fetch'
-        }
+    function gitPullOrigin {
+        git 'pull' 'origin' $args
+    }
 
-        function gitClone {
-            git 'clone' $args
-        }
+    function gitPushMain {
+        git 'push' 'main'
+    }
 
-        Set-Alias -Name np -Value C:\Windows\notepad.exe
-        Set-Alias gst gitStatus
-        Set-Alias gbr gitBranch
-        Set-Alias gco gitCheckout
-        Set-Alias gcb gitCheckoutBranch
-        Set-Alias glol gitLogOneLine
-        Set-Alias gaa gitAddAll
-        Set-Alias ga gitAdd
-        Set-Alias gcmm gitCommit
-        Set-Alias gph gitPush
-        Set-Alias gpl gitPull
-        Set-Alias gpho gitPushOrigin
-        Set-Alias gplo gitPullOrigin
-        Set-Alias gphm gitPushMain
-        Set-Alias gplm gitPullMain
-        Set-Alias gs gitSwitch
-        Set-Alias gmg gitMerge
-        Set-Alias gf gitFetch
-        Set-Alias gcl gitClone
-        ```
+    function gitPullMain {
+        git 'pull' 'main'
+    }
+
+    function gitMerge {
+        git 'merge' $args
+    }
+
+    function gitFetch {
+        git 'fetch'
+    }
+
+    function gitClone {
+        git 'clone' $args
+    }
+
+    Set-Alias -Name np -Value C:\Windows\notepad.exe
+    Set-Alias gst gitStatus
+    Set-Alias gbr gitBranch
+    Set-Alias gco gitCheckout
+    Set-Alias gcb gitCheckoutBranch
+    Set-Alias glol gitLogOneLine
+    Set-Alias gaa gitAddAll
+    Set-Alias ga gitAdd
+    Set-Alias gcmm gitCommit
+    Set-Alias gph gitPush
+    Set-Alias gpl gitPull
+    Set-Alias gpho gitPushOrigin
+    Set-Alias gplo gitPullOrigin
+    Set-Alias gphm gitPushMain
+    Set-Alias gplm gitPullMain
+    Set-Alias gs gitSwitch
+    Set-Alias gmg gitMerge
+    Set-Alias gf gitFetch
+    Set-Alias gcl gitClone
+    ```
 
 4. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
 5. Mở powershell lên và kiểm tra bằng lệnh `alias` hoặc có thể run đoạn mã với bí danh mới để xem kết quả
