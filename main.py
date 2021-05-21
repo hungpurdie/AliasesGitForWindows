@@ -1,6 +1,5 @@
 import os
-import time
-
+import atexit
 
 def GetCwd():
      global dirName
@@ -30,19 +29,23 @@ def Succesfull(cwd):
         print("-\t\t\t\tSuccessful\t\t\t\t-")
         print("-\t\t\t\t           \t\t\t\t-")
         print("_________________________________________________________________________")
-        time.sleep(2)
     else:
         print("_________________________________________________________________________")
         print("-\t\t\t\t           \t\t\t\t-")
         print("-\t\t\t\tFail\t\t\t\t\t-")
         print("-\t\t\t\t           \t\t\t\t-")
         print("_________________________________________________________________________")
-        time.sleep(2)
 
-if __name__ == "__main__":
-    cwd = GetCwd()
-    ExcuteFile(cwd)
-    Succesfull(cwd)
+try:
+    if __name__ == "__main__":
+        cwd = GetCwd()
+        ExcuteFile(cwd)
+        Succesfull(cwd)
+except Exception as e:
+    print(e)
+
+input("Press enter to exit")
+
 
 
 
