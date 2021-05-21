@@ -5,7 +5,7 @@
 - Nếu bạn set default terminal là Git Bash
 
   - Cách 1: Run file `main.exe`
-    1. Download file `GitBash.rar` và giải nén hoặc `git clone repo`
+    1. Download file `GitBash.rar` và giải nén hoặc `git clone repo` và run `main.exe` ở trong thư mục dist
        - Chú ý: phải để `aliases.txt` cùng thư mục với `main.exe`
     2. Mở file `main.exe`
   - Cách 2: Configure thủ công
