@@ -1,6 +1,6 @@
-# Set Aliases For Windowns 10
+# Set Aliases For Windows 10
 
-### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windowns ?
+### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windows ?
 
 - Nếu bạn set default terminal là Git Bash
 
@@ -46,7 +46,7 @@
 
 4. Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
 
-### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windowns ?
+### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windows ?
 
 - Nếu bạn set default terminal là Powershell
 
