@@ -5,9 +5,9 @@
 - Nếu bạn set default terminal là Git Bash
 
   - Cách 1: Run file `main.exe`
-    1. Download file `GitBash.rar` và giải nén hoặc `git clone repo` và run `main.exe` ở trong thư mục dist
+    1. Download file `SetAliasesGitBash.rar` ở phần Release 
        - Chú ý: phải để `aliases.txt` cùng thư mục với `main.exe`
-    2. Mở file `main.exe`
+    2. Run file `main.exe`
   - Cách 2: Configure thủ công
 
   1. Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
