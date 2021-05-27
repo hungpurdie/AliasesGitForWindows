@@ -1,5 +1,7 @@
 import os
-import atexit
+from colorama import Fore, Back, Style, init
+
+init()
 
 def GetCwd():
      global dirName
@@ -23,13 +25,15 @@ def ExcuteFile(cwd):
 
 def Succesfull(cwd):
     fileName = os.path.join(cwd, '.bashrc')
-    if(os.path.isfile(fileName)):
+    if (os.path.isfile(fileName)):
+        print(Fore.GREEN)
         print("_________________________________________________________________________")
         print("-\t\t\t\t           \t\t\t\t-")
         print("-\t\t\t\tSuccessful\t\t\t\t-")
         print("-\t\t\t\t           \t\t\t\t-")
         print("_________________________________________________________________________")
     else:
+        print(Fore.RED)
         print("_________________________________________________________________________")
         print("-\t\t\t\t           \t\t\t\t-")
         print("-\t\t\t\tFail\t\t\t\t\t-")
@@ -42,9 +46,11 @@ try:
         ExcuteFile(cwd)
         Succesfull(cwd)
 except Exception as e:
+    print(Fore.YELLOW)
     print(e)
 
-input("Press enter to exit")
+
+input("Press enter to exit: ")
 
 
 
