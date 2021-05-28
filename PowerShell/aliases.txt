@@ -1,0 +1,96 @@
+Import-Module Terminal-Icons
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme agnoster
+
+function gitStatus {
+    git 'status'
+}
+
+function gitBranch {
+    git 'branch'
+}
+
+function gitCheckout {
+    git 'checkout' $args
+}
+
+function gitCheckoutBranch {
+    git 'checkout' '-b' $args
+}
+
+function gitSwitch {
+    git 'switch' $args
+}
+
+function gitLogOneLine {
+    git 'log' '--oneline'
+}
+
+function gitAddAll {
+    git 'add' '.'
+}
+
+function gitAdd {
+    git 'add' $args
+}
+
+function gitCommit {
+    git 'commit' '-m' $args
+}
+
+function gitPush {
+    git 'push' $args
+}
+
+function gitPull {
+    git 'pull' $args
+}
+
+function gitPushOrigin {
+    git 'push' 'origin' $args
+}
+
+function gitPullOrigin {
+    git 'pull' 'origin' $args
+}
+
+function gitPushMain {
+    git 'push' 'main'
+}
+
+function gitPullMain {
+    git 'pull' 'main'
+}
+
+function gitMerge {
+    git 'merge' $args
+}
+
+function gitFetch {
+    git 'fetch'
+}
+
+function gitClone {
+    git 'clone' $args
+}
+
+Set-Alias -Name np -Value C:\Windows\notepad.exe
+Set-Alias gst gitStatus
+Set-Alias gbr gitBranch
+Set-Alias gco gitCheckout
+Set-Alias gcb gitCheckoutBranch
+Set-Alias glol gitLogOneLine
+Set-Alias gaa gitAddAll
+Set-Alias ga gitAdd
+Set-Alias gcmm gitCommit
+Set-Alias gph gitPush
+Set-Alias gpl gitPull
+Set-Alias gpho gitPushOrigin
+Set-Alias gplo gitPullOrigin
+Set-Alias gphm gitPushMain
+Set-Alias gplm gitPullMain
+Set-Alias gs gitSwitch
+Set-Alias gmg gitMerge
+Set-Alias gf gitFetch
+Set-Alias gcl gitClone
