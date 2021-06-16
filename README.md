@@ -2,173 +2,63 @@
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windows ?
 
-- Nếu bạn set default terminal là Git Bash
+1. Nếu bạn set default terminal là Git Bash
 
-  - Cách 1: Run file `main.exe`
+  - Run file `main.exe`
     1. Download file `SetAliasesGitBash.rar` ở phần Release
+
        - Chú ý: phải để `aliases.txt` cùng thư mục với `main.exe`
+
     2. Mở file `main.exe`
-  - Cách 2: Configure thủ công
 
-    1.  Mở `Command Prompt` và `cd` đến `C:\Users\USERNAME\`, trên thiết bị của tôi: `C:\Users\Root\`
+- Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn đúng với `format` của các alias
 
-    2.  Gõ vào lệnh: `notepad .bashrc`
+- Ra màn hình desktop để kiểm tra bằng cách
 
-    3.  Dán dòng code này vào
+- Chuột phải vào màn hình và chọn `Git Bash Here`
 
-    ```
-    alias cls='clear'
-    alias gst='git status'
-    alias gbr='git branch'
-    alias gs='git switch'
-    alias gsm='git switch main'
-    alias gco='git checkout'
-    alias gcb='git checkout -b'
-    alias ga='git add'
-    alias gaa='git add .'
-    alias gcmm='git commit -m'
-    alias gph='git push'
-    alias gpho='git push origin'
-    alias gphm='git push main'
-    alias gpl='git pull'
-    alias gplo='git pull origin'
-    alias glol='git log --oneline'
-    alias gmg='git merge'
-    alias gf='git fetch'
-    alias gcl='git clone'
-    ```
-
-1. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn đúng với `format` của các alias
-
-2. Ra màn hình desktop để kiểm tra bằng cách
-
-3. Chuột phải vào màn hình và chọn `Git Bash Here`
-
-4. Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
+- Tiếp theo gõ lệnh: `alias` để kiểm tra các Aliases đã được thêm vào thành công hay chưa và chạy thử 1 lệnh để xem kết quả
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windows ?
 
-- Nếu bạn set default terminal là PowerShell
-
+2. Nếu bạn set default terminal là PowerShell
   - _Chú ý:_ Terminal là **[PowerShell](https://github.com/PowerShell/PowerShell)** không phải là **Windows PowerShell**
 
   ![](https://github.com/nmhung2022/SetAliasesForWindows/blob/main/searchpowershell.png?raw=true)
 
-  - Cách 1: Run file `main.ps1`
+    - Run file `main.ps1`
 
-    1. Download file `SetAliasesPowerShell.rar` ở phần Release
+        1. Download file `SetAliasesPowerShell.rar` ở phần Release
 
-    2. Open **PowerShell**, cd đến thư mục vừa tải xuống
+        2. Open **PowerShell**, cd đến thư mục vừa tải xuống
 
-    3. Gõ vào lệnh: `.\main.ps1`
+        3. Gõ vào lệnh: `.\main.ps1`
 
-  - Cách 2: Configure thủ công
+#### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
 
-    1. Mở **PowerShell** và cd đến `C:\Users\USERNAME\`
-    2. Gõ vào lệnh:
+- Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
 
-    ```
-        ni $profile
-        notepad $profile
-    ```
+- Mở powershell lên và kiểm tra bằng lệnh `alias` hoặc có thể run đoạn mã với bí danh mới để xem kết quả
 
-    3. Dán dòng code này vào
+# Danh sách bí danh trong setting tên
 
-    #### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
-
-    ```
-    function gitStatus {
-        git 'status'
-    }
-
-    function gitBranch {
-        git 'branch'
-    }
-
-    function gitCheckout {
-        git 'checkout' $args
-    }
-
-    function gitCheckoutBranch {
-        git 'checkout' '-b' $args
-    }
-
-    function gitSwitch {
-        git 'switch' $args
-    }
-
-    function gitLogOneLine {
-        git 'log' '--oneline'
-    }
-
-    function gitAddAll {
-        git 'add' '.'
-    }
-
-    function gitAdd {
-        git 'add' $args
-    }
-
-    function gitCommit {
-        git 'commit' '-m' $args
-    }
-
-    function gitPush {
-        git 'push' $args
-    }
-
-    function gitPull {
-        git 'pull' $args
-    }
-
-    function gitPushOrigin {
-        git 'push' 'origin' $args
-    }
-
-    function gitPullOrigin {
-        git 'pull' 'origin' $args
-    }
-
-    function gitPushMain {
-        git 'push' 'main'
-    }
-
-    function gitPullMain {
-        git 'pull' 'main'
-    }
-
-    function gitMerge {
-        git 'merge' $args
-    }
-
-    function gitFetch {
-        git 'fetch'
-    }
-
-    function gitClone {
-        git 'clone' $args
-    }
-
-    Set-Alias -Name np -Value C:\Windows\notepad.exe
-    Set-Alias gst gitStatus
-    Set-Alias gbr gitBranch
-    Set-Alias gco gitCheckout
-    Set-Alias gcb gitCheckoutBranch
-    Set-Alias glol gitLogOneLine
-    Set-Alias gaa gitAddAll
-    Set-Alias ga gitAdd
-    Set-Alias gcmm gitCommit
-    Set-Alias gph gitPush
-    Set-Alias gpl gitPull
-    Set-Alias gpho gitPushOrigin
-    Set-Alias gplo gitPullOrigin
-    Set-Alias gphm gitPushMain
-    Set-Alias gplm gitPullMain
-    Set-Alias gs gitSwitch
-    Set-Alias gmg gitMerge
-    Set-Alias gf gitFetch
-    Set-Alias gcl gitClone
-    ```
-
-4. Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
-5. Mở powershell lên và kiểm tra bằng lệnh `alias` hoặc có thể run đoạn mã với bí danh mới để xem kết quả
+|Alias              | Git command           |
+|-------------------|-----------------------|
+|    `gst`          |   `git status`        |
+|    `gbr`          |   `git branch`        |
+|    `gs`           |   `git switch`        |
+|    `gsm`          |   `git switch main`   |
+|    `gco`          |   `git checkout`      |
+|    `gcb`          |   `git checkout -b`   |
+|    `ga`           |   `git add`           |
+|    `gaa`          |   `git add .`         |
+|    `gcmm`         |   `git commit -m`     |
+|    `gph`          |   `git push`          |
+|    `gpho`         |   `git push origin`   |
+|    `gphm`         |   `git push main`     |
+|    `gpl`          |   `git pull`          |
+|    `gplo`         |   `git pull origin`   |
+|    `glol`         |   `git log --oneline` |
+|    `gmg`          |   `git merge`         |
+|    `gf`           |   `git fetch`         |
+|    `gcl`          |   `git clone`         |
