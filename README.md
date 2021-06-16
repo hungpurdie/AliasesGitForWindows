@@ -2,7 +2,7 @@
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Git Bash dành cho windows ?
 
-1. Nếu bạn set default terminal là Git Bash
+1.  Nếu bạn set default terminal là Git Bash
 
   - Run file `main.exe`
     1. Download file `SetAliasesGitBash.rar` ở phần Release
@@ -10,8 +10,6 @@
        - Chú ý: phải để `aliases.txt` cùng thư mục với `main.exe`
 
     2. Mở file `main.exe`
-
-- Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn đúng với `format` của các alias
 
 - Ra màn hình desktop để kiểm tra bằng cách
 
@@ -21,11 +19,11 @@
 
 ### Làm thế nào để cài đặt aliases (bí danh) trong Powershell dành cho windows ?
 
-2. Nếu bạn set default terminal là PowerShell
-  - _Chú ý:_ Terminal là **[PowerShell](https://github.com/PowerShell/PowerShell)** không phải là **Windows PowerShell**
+2.  Nếu bạn set default terminal là PowerShell
+
+- Chú ý: Terminal là **[PowerShell](https://github.com/PowerShell/PowerShell)** không phải là **Windows PowerShell**
 
   ![](https://github.com/nmhung2022/SetAliasesForWindows/blob/main/searchpowershell.png?raw=true)
-
     - Run file `main.ps1`
 
         1. Download file `SetAliasesPowerShell.rar` ở phần Release
@@ -34,9 +32,7 @@
 
         3. Gõ vào lệnh: `.\main.ps1`
 
-#### Chú ý: khi setAlias cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
-
-- Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn
+#### Chú ý: khi set alias trong Powershell cần kiểm tra nó có trùng với các alias mặc định hay chưa ? hông sao cả khi ta mở Powershell sẽ có thông báo lỗi, ta chỉ cần đổi alias mới là được
 
 - Mở powershell lên và kiểm tra bằng lệnh `alias` hoặc có thể run đoạn mã với bí danh mới để xem kết quả
 
@@ -62,3 +58,7 @@
 |    `gmg`          |   `git merge`         |
 |    `gf`           |   `git fetch`         |
 |    `gcl`          |   `git clone`         |
+
+### Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn đúng với `format` của các alias trong file `alias.txt`
+
+
