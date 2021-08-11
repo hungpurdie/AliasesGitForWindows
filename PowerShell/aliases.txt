@@ -3,6 +3,12 @@ Import-Module posh-git
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme agnoster
 
+
+function gitInit {
+    git 'init'
+}
+
+
 function gitStatus {
     git 'status'
 }
@@ -39,6 +45,10 @@ function gitCommit {
     git 'commit' '-m' $args
 }
 
+function gitCommitAmend {
+    git 'commit' '--amend' '-m' $args
+}
+
 function gitPush {
     git 'push' $args
 }
@@ -55,42 +65,41 @@ function gitPullOrigin {
     git 'pull' 'origin' $args
 }
 
-function gitPushMain {
-    git 'push' 'main'
-}
-
-function gitPullMain {
-    git 'pull' 'main'
-}
-
 function gitMerge {
     git 'merge' $args
 }
 
+
 function gitFetch {
     git 'fetch'
 }
+
 
 function gitClone {
     git 'clone' $args
 }
 
 Set-Alias -Name np -Value C:\Windows\notepad.exe
-Set-Alias gst gitStatus
-Set-Alias gbr gitBranch
-Set-Alias gco gitCheckout
-Set-Alias gcb gitCheckoutBranch
-Set-Alias glol gitLogOneLine
-Set-Alias gaa gitAddAll
-Set-Alias ga gitAdd
-Set-Alias gcmm gitCommit
-Set-Alias gph gitPush
-Set-Alias gpl gitPull
-Set-Alias gpho gitPushOrigin
-Set-Alias gplo gitPullOrigin
-Set-Alias gphm gitPushMain
-Set-Alias gplm gitPullMain
-Set-Alias gs gitSwitch
-Set-Alias gmg gitMerge
-Set-Alias gf gitFetch
-Set-Alias gcl gitClone
+Set-Alias g i gitInit
+Set-Alias g st gitStatus
+Set-Alias g br gitBranch
+Set-Alias g co gitCheckout
+Set-Alias g cob gitCheckoutBranch
+Set-Alias g lol gitLogOneLine
+
+Set-Alias g aa gitAddAll
+Set-Alias g a gitAdd
+
+Set-Alias g cmm gitCommit
+Set-Alias g cmm gitCommit
+
+Set-Alias g pl gitPull
+Set-Alias g plo gitPullOrigin
+Set-Alias g ph gitPush
+
+Set-Alias g pho gitPushOrigin
+Set-Alias g plm gitPullMain
+Set-Alias g s gitSwitch
+Set-Alias g mg gitMerge
+Set-Alias g f gitFetch
+Set-Alias g cl gitClone
