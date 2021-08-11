@@ -36,7 +36,7 @@
 
 - Mở powershell lên và kiểm tra bằng lệnh `alias` hoặc có thể run đoạn mã với bí danh mới để xem kết quả
 
-# Danh sách bí danh với setting của mình 
+# Danh sách bí danh với setting dùng git
 
 |Alias              | Git command           |
 |-------------------|-----------------------|
