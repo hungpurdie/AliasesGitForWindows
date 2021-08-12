@@ -1,0 +1,143 @@
+Clear-Host
+Import-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
+Set-PoshPrompt -Theme agnoster
+
+function gitStatus {
+    git 'status'
+}
+Set-Alias gstt gitStatus
+
+function gitBranch {
+    git 'branch'
+}
+Set-Alias gbr gitBranch
+
+function gitCheckout {
+    git 'checkout' $args
+}
+Set-Alias gco gitCheckout
+
+function gitCheckoutBranch {
+    git 'checkout' '-b' $args
+}
+Set-Alias gcb gitCheckoutBranch
+
+function gitCheckoutMain {
+    git 'checkout' '-b' 'main'
+}
+Set-Alias gcbm gitCheckoutMain
+
+
+function gitSwitch {
+    git 'switch' $args
+}
+Set-Alias gsw gitSwitch
+
+function gitSwitchMain {
+    git 'switch' 'main'
+}
+
+Set-Alias gsm gitSwitchMain
+
+function gitLogOneLine {
+    git 'log' '--oneline'
+}
+Set-Alias glol gitLogOneLine
+
+function gitAddAll {
+    git 'add' '.'
+}
+Set-Alias gaa gitAddAll
+
+function gitAdd {
+    git 'add' $args
+}
+Set-Alias ga gitAdd
+
+function gitCommit {
+    git 'commit' '-m' $args
+}
+Set-Alias gcmm gitCommit
+
+function gitCommitAmend {
+    git 'commit' '--amend' '-m' $args
+}
+Set-Alias gcmma gitCommitAmend
+
+function gitPush {
+    git 'push' $args
+}
+Set-Alias gph gitPush
+
+function gitPushOrigin {
+    git 'push' 'origin' $args
+}
+Set-Alias gpho gitPushOrigin
+
+function gitPull {
+    git 'pull' $args
+}
+Set-Alias gpl gitPull
+
+function gitPullOrigin {
+    git 'pull' 'origin' $args
+}
+Set-Alias gplo gitPullOrigin
+
+function gitMerge {
+    git 'merge' $args
+}
+Set-Alias gmg gitMerge
+
+function gitFetch {
+    git 'fetch'
+}
+Set-Alias gft gitFetch
+
+function gitClone {
+    git 'clone' $args
+}
+Set-Alias gcl gitClone
+
+function gitStash {
+    git 'stash'
+}
+Set-Alias gst gitStash
+
+function gitStashPop {
+    git 'stash' 'pop'
+}
+Set-Alias gsp gitStashPop
+
+function gitReset {
+    git 'rs'
+}
+Set-Alias grs gitReset
+
+function yarnAdd {
+    yarn 'add' $args
+}
+Set-Alias -Name ya yarnAdd
+
+function yarnAddDev {
+    yarn 'add' $args "-D"
+}
+Set-Alias -Name yad yarnAddDev
+
+function yarnStart {
+    yarn 'start'
+}
+Set-Alias -Name ys yarnStart
+
+function yarnCreatReactApp {
+    yarn 'create' 'react-app' $args
+}
+Set-Alias -Name ycr yarnCreatReactApp
+
+function yarnRemove {
+    yarn 'remove' $args
+}
+Set-Alias -Name yr yarnRemove
+
+
+Set-Alias -Name np -Value C:\Windows\notepad.exe
