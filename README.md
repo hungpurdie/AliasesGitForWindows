@@ -63,5 +63,3 @@
 | 19  | Intermediate | `gmg`   | `git merge`             |
 | 20  | Intermediate | `gcmma` | `git commit --amend -m` |
 | 21  |              | `g`     | `git`                   |
-
-### Có thể thêm vào các mã mới hoặc chỉnh sửa theo tuỳ ý của bạn đúng với `format` của các alias trong file `alias.txt`
