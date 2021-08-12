@@ -134,7 +134,7 @@ Set-Alias ga gitAdd
 Set-Alias gcmm gitCommit
 Set-Alias gcmma gitCommitAmend
 
-Set-Alias gf gitFetch
+Set-Alias gft gitFetch
 Set-Alias gpl gitPull
 Set-Alias gplo gitPullOrigin
 Set-Alias gph gitPush
