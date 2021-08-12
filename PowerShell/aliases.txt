@@ -1,13 +1,6 @@
-Import-Module Terminal-Icons
-Import-Module posh-git
-Import-Module oh-my-posh
+Clear-Host
+Import-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
 Set-PoshPrompt -Theme agnoster
-
-
-function gitInit {
-    git 'init'
-}
-
 
 function gitStatus {
     git 'status'
@@ -69,37 +62,85 @@ function gitMerge {
     git 'merge' $args
 }
 
-
 function gitFetch {
     git 'fetch'
 }
-
 
 function gitClone {
     git 'clone' $args
 }
 
+function gitStash {
+    git 'stash'
+}
+
+function gitStashPop {
+    git 'pop'
+}
+
+function gitReset {
+    git 'rs'
+}
+
+function git {
+    git
+}
+
+function yarnAdd {
+    yarn 'add' $args
+}
+
+function yarnAddDev {
+    yarn 'add' $args "-D"
+}
+
+
+function yarnStart {
+    yarn 'start'
+}
+
+function yarnCreatReactApp {
+    yarn 'create' 'react-app' $args
+}
+
+function yarnRemove {
+    yarn 'remove' $args
+}
+
+
+
 Set-Alias -Name np -Value C:\Windows\notepad.exe
-Set-Alias g i gitInit
-Set-Alias g st gitStatus
-Set-Alias g br gitBranch
-Set-Alias g co gitCheckout
-Set-Alias g cob gitCheckoutBranch
-Set-Alias g lol gitLogOneLine
+Set-Alias ya yarnAdd
+Set-Alias yad yarnAddDev
+Set-Alias ys yarnStart
+Set-Alias ycr yarnCreatReactApp
+Set-Alias yr yarnRemove
 
-Set-Alias g aa gitAddAll
-Set-Alias g a gitAdd
+Set-Alias g git
+Set-Alias gcl gitClone
+Set-Alias gstt gitStatus
+Set-Alias grs gitReset
+Set-Alias gst gitStash
+Set-Alias gstp gitStashPop
 
-Set-Alias g cmm gitCommit
-Set-Alias g cmm gitCommit
+Set-Alias gbr gitBranch
+Set-Alias gco gitCheckout
+Set-Alias gcob gitCheckoutBranch
+Set-Alias glol gitLogOneLine
 
-Set-Alias g pl gitPull
-Set-Alias g plo gitPullOrigin
-Set-Alias g ph gitPush
+Set-Alias gaa gitAddAll
+Set-Alias ga gitAdd
 
-Set-Alias g pho gitPushOrigin
-Set-Alias g plm gitPullMain
-Set-Alias g s gitSwitch
-Set-Alias g mg gitMerge
-Set-Alias g f gitFetch
-Set-Alias g cl gitClone
+Set-Alias gcmm gitCommit
+Set-Alias gcmma gitCommitAmend
+
+Set-Alias gf gitFetch
+Set-Alias gpl gitPull
+Set-Alias gplo gitPullOrigin
+Set-Alias gph gitPush
+Set-Alias gpho gitPushOrigin
+
+
+Set-Alias gsw gitSwitch
+Set-Alias gmg gitMerge
+
