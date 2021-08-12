@@ -1,11 +1,9 @@
 Clear-Host
-Import-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
-Set-PoshPrompt -Theme agnoster
 
 function gitStatus {
     git 'status'
 }
-Set-Alias gstt gitStatus
+Set-Alias gs gitStatus
 
 function gitBranch {
     git 'branch'
@@ -22,10 +20,22 @@ function gitCheckoutBranch {
 }
 Set-Alias gcb gitCheckoutBranch
 
+function gitCheckoutMain {
+    git 'checkout' '-b' 'main'
+}
+Set-Alias gcbm gitCheckoutMain
+
+
 function gitSwitch {
     git 'switch' $args
 }
 Set-Alias gsw gitSwitch
+
+function gitSwitchMain {
+    git 'switch' 'main'
+}
+
+Set-Alias gsm gitSwitchMain
 
 function gitLogOneLine {
     git 'log' '--oneline'
@@ -62,7 +72,6 @@ function gitPushOrigin {
 }
 Set-Alias gpho gitPushOrigin
 
-
 function gitPull {
     git 'pull' $args
 }
@@ -94,44 +103,11 @@ function gitStash {
 Set-Alias gst gitStash
 
 function gitStashPop {
-    git 'pop'
+    git 'stash' 'pop'
 }
-Set-Alias gstp gitStashPop
+Set-Alias gsp gitStashPop
 
 function gitReset {
     git 'rs'
 }
 Set-Alias grs gitReset
-
-function gitKey {
-    git
-}
-Set-Alias g gitKey
-
-function yarnAdd {
-    yarn 'add' $args
-}
-Set-Alias -Name ya yarnAdd
-
-function yarnAddDev {
-    yarn 'add' $args "-D"
-}
-Set-Alias -Name yad yarnAddDev
-
-function yarnStart {
-    yarn 'start'
-}
-Set-Alias -Name ys yarnStart
-
-function yarnCreatReactApp {
-    yarn 'create' 'react-app' $args
-}
-Set-Alias -Name ycr yarnCreatReactApp
-
-function yarnRemove {
-    yarn 'remove' $args
-}
-Set-Alias -Name yr yarnRemove
-
-
-Set-Alias -Name np -Value C:\Windows\notepad.exe
