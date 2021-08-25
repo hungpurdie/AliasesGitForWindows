@@ -5,7 +5,7 @@ Clear-Host
 function gitStatus {
     git 'status'
 }
-Set-Alias -Name gstt -Value gitStatus -Force -Option AllScope
+Set-Alias -Name gs -Value gitStatus -Force -Option AllScope
 
 function gitBranch {
     git 'branch'
