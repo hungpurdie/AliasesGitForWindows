@@ -1,6 +1,8 @@
 Import-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
 Set-PoshPrompt -Theme agnoster
 Clear-Host
+Set-Alias -Name np -Value C:\Windows\notepad.exe -Force -Option AllScope
+
 
 function gitStatus {
     git 'status'
@@ -108,30 +110,47 @@ function gitKey {
 }
 Set-Alias -Name g -Value gitKey -Force -Option AllScope
 
-
-function yarnAdd {
-    yarn 'add' ''
+function yarnCreateReactApp {
+    yarn 'create' 'react-app' $args
 }
-Set-Alias -Name ya -Value yarnAdd -Force -Option AllScope
-
-function yarnAddDev {
-    yarn 'add' $args "-D"
-}
-Set-Alias -Name yad -Value yarnAddDev -Force -Option AllScope
 
 function yarnStart {
     yarn 'start'
 }
 Set-Alias -Name ys -Value yarnStart -Force -Option AllScope
 
-function yarnCreateReactApp {
-    yarn 'create' 'react-app' $args
-}
-Set-Alias -Name ycr -Value yarnCreateReactApp -Force -Option AllScope
 
-function yarnRemove {
-    yarn 'remove'
+function yarnAdd {
+    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
+    yarn 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 
 }
+Set-Alias -Name ya -Value yarnAdd -Force -Option AllScope
+
+function yarnAddDev {
+    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
+    yarn 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 "-D"
+}
+Set-Alias -Name yad -Value yarnAddDev -Force -Option AllScope
+
+Set-Alias -Name ycr -Value yarnCreateReactApp -Force -Option AllScope
+function yarnRemove {
+    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
+    yarn 'remove' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 
+}
+
 Set-Alias -Name yr -Value yarnRemove -Force -Option AllScope
 
-Set-Alias -Name np -Value C:\Windows\notepad.exe -Force -Option AllScope
+function yarnAddGlobal {
+    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
+    yarn 'global' 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 "-D"
+    
+}
+Set-Alias -Name yag -Value yarnAddGlobal -Force -Option AllScope
+
+
+function yarnRemoveGlobal {
+    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
+
+    yarn 'globle' 'remove' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 
+}
+Set-Alias -Name yrg -Value yarnRemoveGlobal -Force -Option AllScope
