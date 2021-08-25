@@ -3,111 +3,105 @@ Clear-Host
 function gitStatus {
     git 'status'
 }
-Set-Alias gs gitStatus
+Set-Alias -Name gstt -Value gitStatus -Force -Option AllScope
 
 function gitBranch {
     git 'branch'
 }
-Set-Alias gbr gitBranch
+Set-Alias -Name gbr -Value gitBranch -Force -Option AllScope
 
 function gitCheckout {
     git 'checkout' $args
 }
-Set-Alias gco gitCheckout
+Set-Alias -Name gco -Value gitCheckout -Force -Option AllScope
 
 function gitCheckoutBranch {
     git 'checkout' '-b' $args
 }
-Set-Alias gcb gitCheckoutBranch
-
-function gitCheckoutMain {
-    git 'checkout' '-b' 'main'
-}
-Set-Alias gcbm gitCheckoutMain
-
+Set-Alias -Name gcb -Value gitCheckoutBranch -Force -Option AllScope
 
 function gitSwitch {
     git 'switch' $args
 }
-Set-Alias gsw gitSwitch
-
-function gitSwitchMain {
-    git 'switch' 'main'
-}
-
-Set-Alias gsm gitSwitchMain
+Set-Alias -Name gsw -Value gitSwitch -Force -Option AllScope
 
 function gitLogOneLine {
     git 'log' '--oneline'
 }
-Set-Alias glol gitLogOneLine
-
-function gitAddAll {
-    git 'add' '.'
-}
-Set-Alias gaa gitAddAll
+Set-Alias -Name gll -Value gitLogOneLine -Force -Option AllScope
 
 function gitAdd {
     git 'add' $args
 }
-Set-Alias ga gitAdd
+Set-Alias -Name ga -Value gitAdd -Force -Option AllScope
+
+function gitAddAll {
+    git 'add' '.'
+}
+Set-Alias -Name gaa -Value gitAddAll -Force -Option AllScope
 
 function gitCommit {
     git 'commit' '-m' $args
 }
-Set-Alias gcmm gitCommit
+Set-Alias -Name gcm -Value gitCommit -Force -Option AllScope
 
 function gitCommitAmend {
     git 'commit' '--amend' '-m' $args
 }
-Set-Alias gcmma gitCommitAmend
+Set-Alias -Name gca -Value gitCommitAmend -Force -Option AllScope
 
 function gitPush {
     git 'push' $args
 }
-Set-Alias gph gitPush
+Set-Alias -Name gph -Value gitPush -Force -Option AllScope
 
 function gitPushOrigin {
     git 'push' 'origin' $args
 }
-Set-Alias gpho gitPushOrigin
+Set-Alias -Name gpho -Value gitPushOrigin -Force -Option AllScope
+
 
 function gitPull {
     git 'pull' $args
 }
-Set-Alias gpl gitPull
+Set-Alias -Name gpl -Value gitPull -Force -Option AllScope
 
 function gitPullOrigin {
     git 'pull' 'origin' $args
 }
-Set-Alias gplo gitPullOrigin
+Set-Alias -Name gplo -Value gitPullOrigin -Force -Option AllScope
 
 function gitMerge {
     git 'merge' $args
 }
-Set-Alias gmg gitMerge
+Set-Alias -Name gmg -Value gitMerge -Force -Option AllScope
 
 function gitFetch {
     git 'fetch'
 }
-Set-Alias gft gitFetch
+Set-Alias -Name gft -Value gitFetch -Force -Option AllScope
 
 function gitClone {
     git 'clone' $args
 }
-Set-Alias gcl gitClone
+Set-Alias -Name gcl -Value gitClone -Force -Option AllScope
 
 function gitStash {
     git 'stash'
 }
-Set-Alias gst gitStash
+Set-Alias -Name gst -Value gitStash -Force -Option AllScope
 
 function gitStashPop {
-    git 'stash' 'pop'
+    git 'pop'
 }
-Set-Alias gsp gitStashPop
+Set-Alias -Name gsp -Value gitStashPop -Force -Option AllScope
 
 function gitReset {
     git 'rs'
 }
-Set-Alias grs gitReset
+Set-Alias -Name grs -Value gitReset -Force -Option AllScope
+
+function gitKey {
+    git
+}
+Set-Alias -Name g -Value gitKey -Force -Option AllScope
