@@ -32,7 +32,7 @@
 
 | #   | Section      | Alisas | Git command             |
 | --- | ------------ | ------ | ----------------------- |
-| 1   | Basic        | `gstt` | `git status`            |
+| 1   | Basic        | `gs`   | `git status`            |
 | 2   | Basic        | `grs`  | `git reset`             |
 | 3   | Basic        | `gbr`  | `git branch`            |
 | 4   | Basic        | `gco`  | `git checkout `         |
