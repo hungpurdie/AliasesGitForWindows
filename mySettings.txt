@@ -2,155 +2,254 @@ Import-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
 Set-PoshPrompt -Theme agnoster
 Clear-Host
 Set-Alias -Name np -Value C:\Windows\notepad.exe -Force -Option AllScope
+# new file
+Function touch {New-Item "$args" -ItemType File}
 
-
-function gitStatus {
+# --------- Git, Github ---------
+Function gitStatus {
     git 'status'
 }
 Set-Alias -Name gs -Value gitStatus -Force -Option AllScope
 
-function gitBranch {
+Function gitBranch {
     git 'branch'
 }
 Set-Alias -Name gbr -Value gitBranch -Force -Option AllScope
 
-function gitCheckout {
+Function gitCheckout {
     git 'checkout' $args
 }
 Set-Alias -Name gco -Value gitCheckout -Force -Option AllScope
 
-function gitCheckoutBranch {
+Function gitCheckoutBranch {
     git 'checkout' '-b' $args
 }
 Set-Alias -Name gcb -Value gitCheckoutBranch -Force -Option AllScope
 
-function gitSwitch {
+Function gitSwitch {
     git 'switch' $args
 }
 Set-Alias -Name gsw -Value gitSwitch -Force -Option AllScope
 
-function gitLogOneLine {
+Function gitLogOneLine {
     git 'log' '--oneline'
 }
 Set-Alias -Name gll -Value gitLogOneLine -Force -Option AllScope
 
-function gitAdd {
+Function gitAdd {
     git 'add' $args
 }
 Set-Alias -Name ga -Value gitAdd -Force -Option AllScope
 
-function gitAddAll {
+Function gitAddAll {
     git 'add' '.'
 }
 Set-Alias -Name gaa -Value gitAddAll -Force -Option AllScope
 
-function gitCommit {
+Function gitCommit {
     git 'commit' '-m' $args
 }
 Set-Alias -Name gcm -Value gitCommit -Force -Option AllScope
 
-function gitCommitAmend {
+Function gitCommitAmend {
     git 'commit' '--amend' '-m' $args
 }
 Set-Alias -Name gca -Value gitCommitAmend -Force -Option AllScope
 
-function gitPush {
+Function gitPush {
     git 'push' $args
 }
 Set-Alias -Name gph -Value gitPush -Force -Option AllScope
 
-function gitPushOrigin {
+Function gitPushOrigin {
     git 'push' 'origin' $args
 }
 Set-Alias -Name gpho -Value gitPushOrigin -Force -Option AllScope
 
-
-function gitPull {
+Function gitPull {
     git 'pull' $args
 }
 Set-Alias -Name gpl -Value gitPull -Force -Option AllScope
 
-function gitPullOrigin {
+Function gitPullOrigin {
     git 'pull' 'origin' $args
 }
 Set-Alias -Name gplo -Value gitPullOrigin -Force -Option AllScope
 
-function gitMerge {
+Function gitMerge {
     git 'merge' $args
 }
 Set-Alias -Name gmg -Value gitMerge -Force -Option AllScope
 
-function gitFetch {
+Function gitFetch {
     git 'fetch'
 }
 Set-Alias -Name gft -Value gitFetch -Force -Option AllScope
 
-function gitClone {
+Function gitClone {
     git 'clone' $args
 }
 Set-Alias -Name gcl -Value gitClone -Force -Option AllScope
 
-function gitStash {
+Function gitStash {
     git 'stash'
 }
 Set-Alias -Name gst -Value gitStash -Force -Option AllScope
 
-function gitStashPop {
+Function gitStashPop {
     git 'pop'
 }
 Set-Alias -Name gsp -Value gitStashPop -Force -Option AllScope
 
-function gitReset {
+Function gitReset {
     git 'rs'
 }
 Set-Alias -Name grs -Value gitReset -Force -Option AllScope
 
-function gitKey {
-    git
+# --------- yarn ---------
+function ycr{yarn create react-app $args}
+Function ys{yarn start}
+Function yd { yarn run dev}
+Function yb { yarn run build}
+Function ya {yarn add $args}
+Function yr {yarn remove $args}
+Function yad { yarn add $args -D}
+function yag {yarn global add $args}
+function yrg {yarn global remove $args}
+
+# --------- npm ---------
+Function ni{ npm install $args }
+Function nig{ npm install -g $args }
+Function nid{ npm install --save-dev $args }
+Function ns{ npm start }
+Function nt{ npm run test }
+Function nb{ npm run build }
+Function nd{ npm run dev }
+Remove-Item Alias:ni -ForceImport-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
+Set-PoshPrompt -Theme agnoster
+Clear-Host
+Set-Alias -Name np -Value C:\Windows\notepad.exe -Force -Option AllScope
+# new file
+Function touch {New-Item "$args" -ItemType File}
+
+# --------- Git, Github ---------
+Function gitStatus {
+    git 'status'
 }
-Set-Alias -Name g -Value gitKey -Force -Option AllScope
+Set-Alias -Name gs -Value gitStatus -Force -Option AllScope
 
-function yarnCreateReactApp {
-    yarn 'create' 'react-app' $args
+Function gitBranch {
+    git 'branch'
 }
+Set-Alias -Name gbr -Value gitBranch -Force -Option AllScope
 
-function yarnStart {
-    yarn 'start'
+Function gitCheckout {
+    git 'checkout' $args
 }
-Set-Alias -Name ys -Value yarnStart -Force -Option AllScope
+Set-Alias -Name gco -Value gitCheckout -Force -Option AllScope
 
-
-function yarnAdd {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 
+Function gitCheckoutBranch {
+    git 'checkout' '-b' $args
 }
-Set-Alias -Name ya -Value yarnAdd -Force -Option AllScope
+Set-Alias -Name gcb -Value gitCheckoutBranch -Force -Option AllScope
 
-function yarnAddDev {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 "-D"
+Function gitSwitch {
+    git 'switch' $args
 }
-Set-Alias -Name yad -Value yarnAddDev -Force -Option AllScope
+Set-Alias -Name gsw -Value gitSwitch -Force -Option AllScope
 
-Set-Alias -Name ycr -Value yarnCreateReactApp -Force -Option AllScope
-function yarnRemove {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'remove' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 
+Function gitLogOneLine {
+    git 'log' '--oneline'
 }
+Set-Alias -Name gll -Value gitLogOneLine -Force -Option AllScope
 
-Set-Alias -Name yr -Value yarnRemove -Force -Option AllScope
-
-function yarnAddGlobal {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'global' 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 "-D"
-    
+Function gitAdd {
+    git 'add' $args
 }
-Set-Alias -Name yag -Value yarnAddGlobal -Force -Option AllScope
+Set-Alias -Name ga -Value gitAdd -Force -Option AllScope
 
-
-function yarnRemoveGlobal {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-
-    yarn 'globle' 'remove' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 
+Function gitAddAll {
+    git 'add' '.'
 }
-Set-Alias -Name yrg -Value yarnRemoveGlobal -Force -Option AllScope
+Set-Alias -Name gaa -Value gitAddAll -Force -Option AllScope
+
+Function gitCommit {
+    git 'commit' '-m' $args
+}
+Set-Alias -Name gcm -Value gitCommit -Force -Option AllScope
+
+Function gitCommitAmend {
+    git 'commit' '--amend' '-m' $args
+}
+Set-Alias -Name gca -Value gitCommitAmend -Force -Option AllScope
+
+Function gitPush {
+    git 'push' $args
+}
+Set-Alias -Name gph -Value gitPush -Force -Option AllScope
+
+Function gitPushOrigin {
+    git 'push' 'origin' $args
+}
+Set-Alias -Name gpho -Value gitPushOrigin -Force -Option AllScope
+
+Function gitPull {
+    git 'pull' $args
+}
+Set-Alias -Name gpl -Value gitPull -Force -Option AllScope
+
+Function gitPullOrigin {
+    git 'pull' 'origin' $args
+}
+Set-Alias -Name gplo -Value gitPullOrigin -Force -Option AllScope
+
+Function gitMerge {
+    git 'merge' $args
+}
+Set-Alias -Name gmg -Value gitMerge -Force -Option AllScope
+
+Function gitFetch {
+    git 'fetch'
+}
+Set-Alias -Name gft -Value gitFetch -Force -Option AllScope
+
+Function gitClone {
+    git 'clone' $args
+}
+Set-Alias -Name gcl -Value gitClone -Force -Option AllScope
+
+Function gitStash {
+    git 'stash'
+}
+Set-Alias -Name gst -Value gitStash -Force -Option AllScope
+
+Function gitStashPop {
+    git 'pop'
+}
+Set-Alias -Name gsp -Value gitStashPop -Force -Option AllScope
+
+Function gitReset {
+    git 'rs'
+}
+Set-Alias -Name grs -Value gitReset -Force -Option AllScope
+
+# --------- yarn ---------
+function ycr{yarn create react-app $args}
+Function ys{yarn start}
+Function yd { yarn run dev}
+Function yb { yarn run build}
+Function ya {yarn add $args}
+Function yr {yarn remove $args}
+Function yad { yarn add $args -D}
+function yag {yarn global add $args}
+function yrg {yarn global remove $args}
+
+# --------- npm ---------
+Function ni{ npm install $args }
+Function nig{ npm install -g $args }
+Function nid{ npm install --save-dev $args }
+Function ns{ npm start }
+Function nt{ npm run test }
+Function nb{ npm run build }
+Function nd{ npm run dev }
+Remove-Item Alias:ni -Force
