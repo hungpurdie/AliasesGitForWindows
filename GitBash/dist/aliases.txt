@@ -1,4 +1,7 @@
 alias cls='clear'
+alias np="'C:\Windows\notepad.exe'"
+
+# --------- Git, Github ---------
 alias gs='git status'
 alias gbr='git branch'
 alias gsw='git switch'
@@ -19,3 +22,26 @@ alias grs='git reset'
 alias gcl='git clone'
 alias gst='git stash'
 alias gsp='git stash pop'
+
+# --------- yarn ---------
+alias ycr='yarn create react-app'
+alias ys='yarn start'
+alias yd='yarn run dev'
+alias yt='yarn run test'
+alias yb='yarn run build'
+alias ya='yarn add'
+alias yr='yarn remove'
+alias yad='yarn add $(package) -D'
+alias yag='yarn add global $(package)'
+alias yag='yarn remove global $(package)'
+
+# --------- npm ---------
+alias ns='npm start'
+alias nd='npm run dev'
+alias nt='npm run test'
+alias nb='npm run build'
+alias na='npm add'
+alias nr='npm remove'
+alias nad='npm add $(package) -D'
+alias nag='npm add global $(package)'
+alias nag='npm remove global $(package)'

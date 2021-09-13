@@ -105,3 +105,25 @@ function gitKey {
     git
 }
 Set-Alias -Name g -Value gitKey -Force -Option AllScope
+
+# --------- yarn ---------
+function ycr{yarn create react-app $args}
+Function ys{yarn start}
+Function yd { yarn run dev}
+Function yb { yarn run build}
+Function ya {yarn add $args}
+Function yr {yarn remove $args}
+Function yad { yarn add $args -D}
+function yag {yarn global add $args}
+function yrg {yarn global remove $args}
+
+# --------- npm ---------
+Function ni{ npm install $args }
+Function nig{ npm install -g $args }
+Function nid{ npm install --save-dev $args }
+Function ns{ npm start }
+Function nt{ npm run test }
+Function nb{ npm run build }
+Function nd{ npm run dev }
+
+Remove-Item Alias:ni -Force
