@@ -30,26 +30,26 @@
 
 # Danh sách aliases với setting dùng git
 
-| #   | Section      | Alisas | Git command             |
-| --- | ------------ | ------ | ----------------------- |
-| 1   | Basic        | `gs`   | `git status`            |
-| 2   | Basic        | `grs`  | `git reset`             |
-| 3   | Basic        | `gbr`  | `git branch`            |
-| 4   | Basic        | `gco`  | `git checkout `         |
-| 5   | Basic        | `gcb`  | `git checkout -b`       |
-| 6   | Basic        | `gcm`  | `git commit -m`         |
-| 7   | Basic        | `ga`   | `git add`               |
-| 8   | Basic        | `gaa`  | `git add .`             |
-| 9   | Basic        | `gcl`  | `git clone`             |
-| 10  | Basic        | `gsw`  | `git switch`            |
-| 11  | Intermediate | `gph`  | `git push`              |
-| 12  | Intermediate | `gpho` | `git push origin`       |
-| 13  | Intermediate | `gft`  | `git fetch`             |
-| 14  | Intermediate | `gpl`  | `git pull`              |
-| 15  | Intermediate | `gplo` | `git pull origin`       |
-| 16  | Intermediate | `gst`  | `git stash`             |
-| 17  | Intermediate | `gsp`  | `git stash pop`         |
-| 18  | Intermediate | `gll`  | `git log --oneline`     |
-| 19  | Intermediate | `gmg`  | `git merge`             |
-| 20  | Intermediate | `gca`  | `git commit --amend -m` |
-| 21  |              | `g`    | `git`                   |
+| #   | Section      | Alisas   | Git command             |
+| --- | ------------ | -------- | ----------------------- |
+| 1   | Basic        | `gst`    | `git status`            |
+| 2   | Basic        | `grs`    | `git reset`             |
+| 3   | Basic        | `gbr`    | `git branch`            |
+| 4   | Basic        | `gco`    | `git checkout `         |
+| 5   | Basic        | `gcb`    | `git checkout -b`       |
+| 6   | Basic        | `gcm`    | `git commit -m`         |
+| 7   | Basic        | `ga`     | `git add`               |
+| 8   | Basic        | `gaa`    | `git add .`             |
+| 9   | Basic        | `gcl`    | `git clone`             |
+| 10  | Basic        | `gsw`    | `git switch`            |
+| 11  | Intermediate | `gph`    | `git push`              |
+| 12  | Intermediate | `gpho`   | `git push origin`       |
+| 13  | Intermediate | `gft`    | `git fetch`             |
+| 14  | Intermediate | `gpl`    | `git pull`              |
+| 15  | Intermediate | `gplo`   | `git pull origin`       |
+| 16  | Intermediate | `gstash` | `git stash`             |
+| 17  | Intermediate | `gsp`    | `git stash pop`         |
+| 18  | Intermediate | `gll`    | `git log --oneline`     |
+| 19  | Intermediate | `gmg`    | `git merge`             |
+| 20  | Intermediate | `gca`    | `git commit --amend -m` |
+| 21  |              | `g`      | `git`                   |
