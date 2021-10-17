@@ -1,129 +1,45 @@
 Clear-Host
 
-function gitStatus {
-    git 'status'
-}
-Set-Alias -Name gs -Value gitStatus -Force -Option AllScope
+# --------- Git, Github ---------
+Function gst { git status }
 
-function gitBranch {
-    git 'branch'
-}
-Set-Alias -Name gbr -Value gitBranch -Force -Option AllScope
+Function gbr { git branch }
 
-function gitCheckout {
-    git 'checkout' $args
-}
-Set-Alias -Name gco -Value gitCheckout -Force -Option AllScope
+Function gco { git checkout $args}
 
-function gitCheckoutBranch {
-    git 'checkout' '-b' $args
-}
-Set-Alias -Name gcb -Value gitCheckoutBranch -Force -Option AllScope
+Function gcb { git checkout -b $args}
+Remove-Item Alias:gcb -Force
 
-function gitSwitch {
-    git 'switch' $args
-}
-Set-Alias -Name gsw -Value gitSwitch -Force -Option AllScope
+Function gsw { git switch $args }
 
-function gitLogOneLine {
-    git 'log' '--oneline'
-}
-Set-Alias -Name gll -Value gitLogOneLine -Force -Option AllScope
+Function gll { git log --oneline}
 
-function gitAdd {
-    git 'add' $args
-}
-Set-Alias -Name ga -Value gitAdd -Force -Option AllScope
+Function gllg { git log --oneline --graph }
 
-function gitAddAll {
-    git 'add' '.'
-}
-Set-Alias -Name gaa -Value gitAddAll -Force -Option AllScope
+Function ga { git add $args }
 
-function gitCommit {
-    git 'commit' '-m' $args
-}
-Set-Alias -Name gcm -Value gitCommit -Force -Option AllScope
+Function gaa { git add . }
 
-function gitCommitAmend {
-    git 'commit' '--amend' '-m' $args
-}
-Set-Alias -Name gca -Value gitCommitAmend -Force -Option AllScope
+Function gcm { git commit -m $args }
 
-function gitPush {
-    git 'push' $args
-}
-Set-Alias -Name gph -Value gitPush -Force -Option AllScope
+Function gca { git commit --amend -m $args }
 
-function gitPushOrigin {
-    git 'push' 'origin' $args
-}
-Set-Alias -Name gpho -Value gitPushOrigin -Force -Option AllScope
+Function gph { git push $args }
 
+Function gpho { git push origin $args }
 
-function gitPull {
-    git 'pull' $args
-}
-Set-Alias -Name gpl -Value gitPull -Force -Option AllScope
+Function gpl { git pull $args }
 
-function gitPullOrigin {
-    git 'pull' 'origin' $args
-}
-Set-Alias -Name gplo -Value gitPullOrigin -Force -Option AllScope
+Function gplo { git pull origin $args }
 
-function gitMerge {
-    git 'merge' $args
-}
-Set-Alias -Name gmg -Value gitMerge -Force -Option AllScope
+Function gmg { git merge $args }
 
-function gitFetch {
-    git 'fetch'
-}
-Set-Alias -Name gft -Value gitFetch -Force -Option AllScope
+Function gft { git fetch }
 
-function gitClone {
-    git 'clone' $args
-}
-Set-Alias -Name gcl -Value gitClone -Force -Option AllScope
+Function gcl { git clone $args }
 
-function gitStash {
-    git 'stash'
-}
-Set-Alias -Name gst -Value gitStash -Force -Option AllScope
+Function gstash { git stash }
 
-function gitStashPop {
-    git 'pop'
-}
-Set-Alias -Name gsp -Value gitStashPop -Force -Option AllScope
+Function gsp { git pop }
 
-function gitReset {
-    git 'rs'
-}
-Set-Alias -Name grs -Value gitReset -Force -Option AllScope
-
-function gitKey {
-    git
-}
-Set-Alias -Name g -Value gitKey -Force -Option AllScope
-
-# --------- yarn ---------
-function ycr{yarn create react-app $args}
-Function ys{yarn start}
-Function yd { yarn run dev}
-Function yb { yarn run build}
-Function ya {yarn add $args}
-Function yr {yarn remove $args}
-Function yad { yarn add $args -D}
-function yag {yarn global add $args}
-function yrg {yarn global remove $args}
-
-# --------- npm ---------
-Function ni{ npm install $args }
-Function nig{ npm install -g $args }
-Function nid{ npm install --save-dev $args }
-Function ns{ npm start }
-Function nt{ npm run test }
-Function nb{ npm run build }
-Function nd{ npm run dev }
-
-Remove-Item Alias:ni -Force
+Function grs { git reset }

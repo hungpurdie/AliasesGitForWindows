@@ -1,8 +1,12 @@
 alias cls='clear'
 alias np="'C:\Windows\notepad.exe'"
 
+# ffmepg
+function webmtomp4 {
+  ffmpeg -i $1 -c:v libx264 -crf 17 -maxrate 1M -bufsize 2M $2 -hide_banner
+}
 # --------- Git, Github ---------
-alias gs='git status'
+alias gst='git status'
 alias gbr='git branch'
 alias gsw='git switch'
 alias gco='git checkout'
@@ -20,7 +24,7 @@ alias gmg='git merge'
 alias gft='git fetch'
 alias grs='git reset'
 alias gcl='git clone'
-alias gst='git stash'
+alias gstash='git stash'
 alias gsp='git stash pop'
 
 # --------- yarn ---------
