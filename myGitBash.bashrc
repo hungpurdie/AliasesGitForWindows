@@ -3,9 +3,9 @@ alias np="'C:\Windows\notepad.exe'"
 
 # ffmepg
 function webmtomp4 {
-  ffmpeg -i $1 -c:v libx264 -crf 17 -maxrate 1M -bufsize 2M $2 -hide_banner
+  outputFileMp4=${1//.webm/.mp4}
+  ffmpeg -i $1 -c:v libx264 -crf 17 -maxrate 1M -bufsize 2M $outputFileMp4 -hide_banner
 }
-
 # --------- Git, Github ---------
 alias gst='git status'
 alias gbr='git branch'

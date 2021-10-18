@@ -8,18 +8,19 @@ Function touch {New-Item "$args" -ItemType File}
 
 # ffmepg
 Function webmtomp4 {
-     Param([string]$InputFileName, [string]$OutputFileName)
-    ffmpeg -i "$InputFileName" -c:v libx264 -crf 17 -maxrate 1M -bufsize 2M "$OutputFileName" -hide_banner
+     Param([string]$InputFileName)
+     $outFileMp4 = $InputFileName.Replace(".webm", ".mp4")
+     ffmpeg -i "$InputFileName" -c:v libx264 -crf 17 -maxrate 1M -bufsize 2M "$outFileMp4" -hide_banner
 }
 
 # --------- Git, Github ---------
 Function gst { git status }
 
-Function gbr { git branch }
+Function gbr { git branch $args }
 
-Function gco { git checkout $args}
+Function gco { git checkout $args }
 
-Function gcb { git checkout -b $args}
+Function gcb { git checkout -b $args }
 Remove-Item Alias:gcb -Force
 
 Function gsw { git switch $args }
@@ -35,7 +36,7 @@ Function gaa { git add . }
 Function gcm { git commit -m $args }
 Remove-Item Alias:gcm -Force
 
-Function gca { git commit --amend -m $args }
+Function gca { git commit --amend $args }
 
 Function gph { git push $args }
 
