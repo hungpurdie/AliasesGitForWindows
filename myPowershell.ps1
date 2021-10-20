@@ -1,6 +1,12 @@
 Import-Module "Oh-My-Posh" -DisableNameChecking -NoClobber
+Import-Module PSReadLine
+Import-Module z
 Set-PoshPrompt -Theme agnoster
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -Colors @{ InlinePrediction = '#2F7004'}
 Clear-Host
+
+#open notepad
 Set-Alias -Name np -Value C:\Windows\notepad.exe -Force -Option AllScope
 
 # new file
@@ -61,25 +67,37 @@ Function grs { git reset }
 # --------- yarn ---------
 Function ycr { yarn create react-app $args}
 Function ycrt { yarn create react-app $args --template typescript}
-
 Function ys { yarn start }
 Function yd { yarn run dev }
 Function yb { yarn run build }
 Function yt { yarn run test }
-
-function ya {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5
+Function ya {
+  $pattern = "yarn add"
+  foreach ($package in $args) {
+   $pattern += ' ' + $package
+  }
+  Invoke-Expression $pattern
 }
-
-function yad {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'add' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5 "-D"
+Function yag {
+  $pattern = "yarn add -g"
+  foreach ($package in $args) {
+   $pattern += ' ' + $package
+  }
+  Invoke-Expression $pattern
 }
-
-function yr {
-    Param([string]$packageName1, [string]$packageName2, [string]$packageName3, [string]$packageName4, [string]$packageName5)
-    yarn 'remove' $packageName1 $packageName2 $packageName3 $packageName4 $packageName5
+Function yad {
+  $pattern = "yarn add --dev"
+  foreach ($package in $args) {
+   $pattern += ' ' + $package
+  }
+  Invoke-Expression $pattern
+}
+Function yr{
+  $pattern = "yarn remove"
+  foreach ($package in $args) {
+   $pattern += ' ' + $package
+  }
+  Invoke-Expression $pattern
 }
 # --------- npm ---------
 Function ni { npm install $args }
