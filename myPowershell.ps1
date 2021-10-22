@@ -10,7 +10,12 @@ Clear-Host
 Set-Alias -Name np -Value C:\Windows\notepad.exe -Force -Option AllScope
 
 # new file
-Function touch {New-Item "$args" -ItemType File}
+Function touch {
+  for ( $i = 0; $i -lt $args.count; $i++ ) {
+    $pattern = "New-Item " + $args[$i] + " -ItemType File"
+    Invoke-Expression $pattern
+  }
+}
 
 # ffmepg
 Function webmtomp4 {
