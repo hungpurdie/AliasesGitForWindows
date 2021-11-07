@@ -29,6 +29,7 @@
     3. Gõ vào lệnh: `.\main.ps1`
 
 # Danh sách aliases với setting dùng git
+<div align="center">
 
 | #   | Section      | Alisas   | Git command             |
 | --- | ------------ | -------- | ----------------------- |
@@ -53,3 +54,5 @@
 | 19  | Intermediate | `gmg`    | `git merge`             |
 | 20  | Intermediate | `gca`    | `git commit --amend -m` |
 | 21  |              | `g`      | `git`                   |
+
+ </div>
